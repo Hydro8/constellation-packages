@@ -41,7 +41,7 @@
                 foreach (string player in players)
                 {
                     string command_player = this.GenerateCommandFromUrlToSqueezebox(command, player, value, value2);
-                    PackageHost.WriteInfo("Send {0} to {1}", command, player);
+                    PackageHost.WriteInfo("Send {0} to {1} : {2}", command, player, command_player);
                     string request_result = this.Requete(command_player);
                 }
             }

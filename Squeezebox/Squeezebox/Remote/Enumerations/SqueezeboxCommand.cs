@@ -110,6 +110,10 @@
         [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"playlist\",\"clear\"]]}}")]
         Playlist_Clear,
 
+        //// Delete song from playlist by index
+        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"playlist\",\"delete\",\"{1}\"]]}}")]
+        Playlist_Delete,
+    
         //// Move song from playlist by index
         [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"playlist\",\"move\",\"{1}\",\"{2}\"]]}}")]
         Playlist_Move,
@@ -195,15 +199,15 @@
         Sync_To,
 
         //// Set volume (require volume level)
-        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",{1}]]}}")]
+        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",\"{1}\"]]}}")]
         Volume,
 
         //// Decrease volume
-        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",\"-2\"]]}}")]
+        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",\"-{1}\"]]}}")]
         Volume_Down,
 
         //// Increase volume
-        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",\"+2\"]]}}")]
+        [Command("{{\"id\":1,\"method\":\"slim.request\",\"params\":[\"{0}\",[\"mixer\",\"volume\",\"+{1}\"]]}}")]
         Volume_Up,
 
 
